@@ -12,6 +12,6 @@
 .planet {
   border: 2px #000 dashed;
   background: #7f9f9e;
-  padding: 0.3rem;
+  padding: 2px;
 }
 </style>

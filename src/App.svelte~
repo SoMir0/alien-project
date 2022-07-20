@@ -65,7 +65,7 @@ aside:hover {
 .game {
   display: flex; align-items: center; justify-content: center;
   text-align: center;
-  background: #e1d9cc;
+  background: #e7dfcf;
   width: 5rem; height: 5rem;
   border-radius: 1rem;
   transition: 150ms ease-in-out;
