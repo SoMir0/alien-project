@@ -1,8 +1,29 @@
-<nav class="navigation">
-    <a href="/">Find Aliens</a>
-    <a href="/">Play games</a>
-    <a href="/">Explore</a>
-</nav>
+<script>
+import { Router, link, Route } from "svelte-routing";
+
+import Games from '../routes/Games.svelte';
+import Aliens from '../routes/Aliens.svelte';
+import Explore from '../routes/Explore.svelte';
+
+function getProps() {
+  return { class: 'navlink' }
+}
+
+export let url = '';
+</script>
+
+<Router url="{url}">
+  <nav class="navigation">
+    <a href="/" class="navlink" use:link>Home</a>
+    <a href="/aliens" class="navlink" use:link>Aliens</a>
+    <a href="/explore" class="navlink" use:link>Explore</a>
+  </nav>
+  <div>
+    <Route path="/"><Games /></Route>
+    <Route path="aliens" component="{Aliens}" />
+    <Route path="explore" component="{Explore}" />
+  </div>
+</Router>
 
 <style>
     .navigation {
@@ -15,7 +36,7 @@
         top: 0;
     }
 
-    .navigation a {
+    .navlink {
         text-decoration: none;
         background-color: #d6c7b1;
         font-weight: bold;
