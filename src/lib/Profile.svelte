@@ -13,5 +13,10 @@
   border: 2px #000 dashed;
   background: #7f9f9e;
   padding: 0.3rem;
+  transition: transform 200ms ease-in;
+}
+
+.planet:hover {
+  transform: scale(1.05);
 }
 </style>
