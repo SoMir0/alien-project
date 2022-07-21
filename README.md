@@ -7,6 +7,6 @@ Alien game, unfinished.
 ```
 git clone https://github.com/SoMir0/alien-project.git
 cd alien-project
-npm i
+npm ci
 npm run dev
 ```

@@ -1,8 +1,9 @@
 <script>
 import Profile from './lib/Profile.svelte';
+import Chat from './lib/Chat.svelte';
 
 let profileExtended = false;
-let chatExtended = true;
+let chatExtended = false;
 </script>
 
 <main>
@@ -10,7 +11,7 @@ let chatExtended = true;
     <Profile />
   </aside>
   <div class="container" style={chatExtended ? "margin-right: 17rem" : ""}>
-    <button class="toggleButton left" on:click={() => {profileExtended = !profileExtended}}>{#if profileExtended}⤆{:else}⤇{/if}</button>
+    <button class="toggleButton left" on:click={() => {profileExtended = !profileExtended}}>👾</button>
     <button class="toggleButton right" on:click={() => {chatExtended = !chatExtended}}>{#if chatExtended}⤇{:else}⤆{/if}</button>
     <div class="game-list">
       <div class="game">Pong</div>
@@ -20,8 +21,7 @@ let chatExtended = true;
     </div>
   </div>
   <aside class="chat" style={chatExtended ? "" : "right: -17rem"}>
-    <h3>Chat</h3>
-    <input type="text" class="textinput" placeholder="Type your message..." />
+    <Chat />
   </aside>
 </main>
 
@@ -97,18 +97,5 @@ aside:hover {
 
 .right {
   right: 0;
-}
-
-.chat .textinput {
-  position: absolute; bottom: 1rem;
-  outline: none; border: none;
-  border-radius: 0.1rem;
-  transition: 100ms ease-in;
-  height: 1.5rem;
-  font-size: 1rem;
-}
-
-.chat .textinput:hover {
-  background: #ddd;
 }
 </style>
