@@ -16,8 +16,8 @@
   display: flex; align-items: center; justify-content: center;
   text-align: center;
   text-decoration: none;
-  color: #111;
-  background: #e1d9cc;
+  color: var(--white);
+  background: var(--light-blue);
   width: 5rem; height: 5rem;
   border-radius: 1rem;
   user-select: none;
@@ -27,7 +27,7 @@
 
 .game:hover {
   transform: translatey(-10%);
-  box-shadow: #2229 0 5px 1rem;
+  box-shadow: var(--box-shadow-color) 0 5px 1rem;
 }
 
 </style>

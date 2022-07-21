@@ -27,7 +27,7 @@ export let url = '';
 
 <style>
     .navigation {
-        background-color: #e9ddce;
+        background-color: var(--dark-white);
         height: 5rem;
         width: 100%;
         display: flex; flex-direction: row; justify-content: center; align-items: center;
@@ -38,9 +38,9 @@ export let url = '';
 
     .navlink {
         text-decoration: none;
-        background-color: #d6c7b1;
+        background-color: var(--white);
         font-weight: bold;
-        color: #111;
+        color: var(--dark-gray);
         padding: 1rem 2rem;
     }
 </style>

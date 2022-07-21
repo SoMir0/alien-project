@@ -1,10 +1,21 @@
 <script>
+// imports
 import Profile from './lib/Profile.svelte';
 import Chat from './lib/Chat.svelte';
 import Navbar from './lib/Navbar.svelte';
 
+// variables
+let userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 let profileExtended = false;
 let chatExtended = false;
+
+// functions
+if(userPrefersDark && !window.document.body.classList.contains('dark')) window.document.body.classList.toggle('dark');
+const toggleTheme = () => {
+  userPrefersDark = !userPrefersDark;
+  window.document.body.classList.toggle('dark');
+}
 </script>
 
 <main>
@@ -15,7 +26,7 @@ let chatExtended = false;
   </div>
 
   <aside class="profile" style={profileExtended ? "" : "left: -17rem"}>
-    <Profile />
+    <Profile toggleThemeFunc={toggleTheme} currentTheme={userPrefersDark} />
   </aside>
 
   <aside class="chat" style={chatExtended ? "" : "right: -17rem"}>
@@ -24,15 +35,36 @@ let chatExtended = false;
 </main>
 
 <style>
+:root {
+  --light-white: #fff;
+  --white: #FEFBF6;
+  --dark-white: #EDEAE5;
+  --light-blue: #73A0B3;
+  --purple: #7F5283;
+  --dark-gray: #3D3C42;
+  --box-shadow-color: rgba(108, 108, 108, .5);
+}
+
+:global(body.dark) {
+  --light-white: #000;
+  --white: #3D3C42;
+  --dark-white: #2D2C32;
+  --light-blue: #A6D1E6;
+  --purple: #7F5283;
+  --dark-gray: #FEFBF6;
+  --box-shadow-color: rgba(18, 18, 18, .5);
+}
+
 main {
   position: fixed; top: 0; left: 0;
   width: 100vw; height: 100vh;
   font-family: monospace, sans-serif;
-  background: #f0ebe3;
+  background: var(--white);
+  color: var(--dark-gray);
 }
 
 aside {
-  background: #e4dccf;
+  background: var(--dark-white);
   transition: 200ms linear;
   display: flex; flex-direction: column; align-items: center;
   position: absolute;
@@ -53,6 +85,7 @@ aside {
 }
 
 .container .toggleButton {
+  color: var(--dark-gray);
   position: absolute;
   top: 0;
   background: none;
@@ -68,7 +101,7 @@ aside {
 }
 
 .chat:hover {
-  box-shadow: rgba(108, 108, 108, .5) 0 0 1rem;
+  box-shadow: var(--box-shadow-color) 0 0 1rem;
 }
 
 .left {
