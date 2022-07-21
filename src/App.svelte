@@ -21,9 +21,10 @@ const toggleTheme = () => {
 <main>
   <div class="container" style={chatExtended ? "margin-right: 17rem" : ""}>
     <Navbar />
-    <button class="toggleButton left" on:click={() => {profileExtended = !profileExtended}}>👽</button>
-    <button class="toggleButton right" on:click={() => {chatExtended = !chatExtended}}>{#if chatExtended}⤫{:else}⤆{/if}</button>
   </div>
+
+  <button class="toggleButton left" on:click={() => {profileExtended = !profileExtended}}>👽</button>
+  <button class="toggleButton right" on:click={() => {chatExtended = !chatExtended}}>{#if chatExtended}⤫{:else}⤆{/if}</button>
 
   <aside class="profile" style={profileExtended ? "" : "left: -17rem"}>
     <Profile toggleThemeFunc={toggleTheme} currentTheme={userPrefersDark} />
@@ -35,6 +36,11 @@ const toggleTheme = () => {
 </main>
 
 <style>
+:global(body), :global(html) {
+  width: 100%; height: 100%;
+  margin: 0; padding: 0;
+}
+
 :root {
   --light-white: #fff;
   --white: #FEFBF6;
@@ -57,7 +63,7 @@ const toggleTheme = () => {
 
 main {
   position: fixed; top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100%; height: 100%;
   font-family: monospace, sans-serif;
   background: var(--white);
   color: var(--dark-gray);
@@ -69,22 +75,21 @@ aside {
   display: flex; flex-direction: column; align-items: center;
   position: absolute;
   width: 15rem;
-  height: 100%;
+  height: 95%;
   padding: 1rem;
+}
+
+.container {
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex; justify-content: center;
 }
 
 .profile {
   top: 0; left: 0;
 }
 
-.container {
-  display: flex; justify-content: center;
-  transition: margin 100ms linear;
-  padding: 1rem;
-  margin-top: 5rem;
-}
-
-.container .toggleButton {
+.toggleButton {
   color: var(--dark-gray);
   position: absolute;
   top: 0;
@@ -98,6 +103,8 @@ aside {
 
 .chat {
   top: 0; right: 0;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  gap: 0.5rem; padding: 1rem;
 }
 
 .chat:hover {

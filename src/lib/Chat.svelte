@@ -8,7 +8,7 @@
 <style>
 .messages {
   width: 90%;
-  height: 90%;
+  height: 100%;
   display: flex; flex-direction: column; gap: 2rem;
   background-color: var(--dark-white);
   background-size: 53px 53px;
@@ -42,7 +42,6 @@
   font-size: 1rem;
   width: 80%;
   height: 3rem;
-  position: absolute; bottom: 5%;
   transition: 150ms ease-in;
 }
 

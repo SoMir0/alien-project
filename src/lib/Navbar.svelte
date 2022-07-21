@@ -14,6 +14,7 @@ export let url = '';
 
 <Router url="{url}">
   <nav class="navigation">
+    <h1>Alien Project</h1>
     <a href="/" class="navlink" use:link>Home</a>
     <a href="/aliens" class="navlink" use:link>Aliens</a>
     <a href="/explore" class="navlink" use:link>Explore</a>
@@ -34,6 +35,10 @@ export let url = '';
         gap: 0.5rem;
         position: absolute;
         top: 0;
+    }
+
+    .navigation h1 {
+      padding-right: 5rem;
     }
 
     .navlink {
