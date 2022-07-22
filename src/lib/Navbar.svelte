@@ -38,7 +38,8 @@ export let url = '';
     }
 
     .navigation h1 {
-      padding-right: 5rem;
+      position: absolute;
+      margin-right: 50rem;
     }
 
     .navlink {

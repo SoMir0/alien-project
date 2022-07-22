@@ -75,7 +75,7 @@ aside {
   display: flex; flex-direction: column; align-items: center;
   position: absolute;
   width: 15rem;
-  height: 95%;
+  height: 97vh;
   padding: 1rem;
 }
 
@@ -83,6 +83,7 @@ aside {
   margin-top: 5rem;
   padding: 1rem;
   display: flex; justify-content: center;
+  transition: 100ms linear;
 }
 
 .profile {
