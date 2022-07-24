@@ -6,6 +6,9 @@ import Aliens from '../routes/Aliens.svelte';
 import Explore from '../routes/Explore.svelte';
 
 import Pong from '../routes/games/Pong.svelte';
+import Spaceinvaders from '../routes/games/Spaceinvaders.svelte';
+import Tetris from '../routes/games/Tetris.svelte';
+import Snake from '../routes/games/Snake.svelte';
 
 function getProps() {
   return { class: 'navlink' }
@@ -26,6 +29,9 @@ export let url = '';
     <Route path="aliens" component="{Aliens}" />
     <Route path="explore" component="{Explore}" />
     <Route path="pong" component="{Pong}" />
+    <Route path="tetris" component="{Tetris}" />
+    <Route path="space-invaders" component="{Spaceinvaders}" />
+    <Route path="snake" component="{Snake}" />
   </div>
 </Router>
 

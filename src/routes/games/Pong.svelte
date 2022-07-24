@@ -1,1 +1,1 @@
-<h1>pPPOOOOOOngggg!</h1>
+<h1>Pong!</h1>
