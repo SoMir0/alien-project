@@ -1,5 +1,9 @@
+<script>
+import { link } from "svelte-routing";
+</script>
+
 <div class="game-list">
-  <a href="/" class="game" style="background-image: url('https://cdn.vox-cdn.com/thumbor/ti0KbF0NyLx7-xz7uyvUJ55GNNo=/0x33:800x566/1820x1213/filters:focal(0x33:800x566)/cdn.vox-cdn.com/assets/1812005/Pong.png')"><p>Pong</p></a>
+  <a href="/pong" class="game" use:link style="background-image: url('https://cdn.vox-cdn.com/thumbor/ti0KbF0NyLx7-xz7uyvUJ55GNNo=/0x33:800x566/1820x1213/filters:focal(0x33:800x566)/cdn.vox-cdn.com/assets/1812005/Pong.png')"><p>Pong</p></a>
   <a href="/" class="game" style="background-image: url('https://image.winudf.com/v2/image/Y29tLnNuYWtlY29tcGFueS5zbmFrZWdhbWVfc2NyZWVuXzFfanhsM21pams/screen-1.jpg?fakeurl=1&type=.jpg');"><p>Snake</p></a>
   <a href="/" class="game" style="background-image: url('https://assets.vg247.com/current/2014/04/bg-tetris-10.png')"><p>Tetris</p></a>
   <a href="/" class="game" style="background-image: url('https://1.bp.blogspot.com/-VoKIrzdjBuk/Xn1q3LhNToI/AAAAAAAAW64/O7jRIrhA7rYrOy3iDQMkbSxEOiFw9bcOACLcBGAsYHQ/s1600/space-invaders.jpg')"><p>Space Invaders</p></a>

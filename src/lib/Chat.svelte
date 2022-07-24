@@ -46,23 +46,23 @@
 }
 
 .textinput::-webkit-input-placeholder {
-  color: var(--dark-gray);
+  color: var(--gray);
 }
 
 .textinput:-moz-placeholder { /* Firefox 18- */
-  color: var(--dark-gray);
+  color: var(--gray);
 }
 
 .textinput::-moz-placeholder {  /* Firefox 19+ */
-  color: var(--dark-gray);
+  color: var(--gray);
 }
 
 .textinput:-ms-input-placeholder {
-  color: var(--dark-gray);
+  color: var(--gray);
 }
 
 .textinput::placeholder {
-  color: var(--dark-gray);
+  color: var(--gray);
 }
 
 .textinput:hover {

@@ -48,6 +48,7 @@ const toggleTheme = () => {
   --light-blue: #73A0B3;
   --purple: #7F5283;
   --dark-gray: #3D3C42;
+  --gray: #727272;
   --box-shadow-color: rgba(108, 108, 108, .5);
 }
 
@@ -58,6 +59,7 @@ const toggleTheme = () => {
   --light-blue: #A6D1E6;
   --purple: #7F5283;
   --dark-gray: #FEFBF6;
+  --gray: #b8b8b8;
   --box-shadow-color: rgba(18, 18, 18, .5);
 }
 
