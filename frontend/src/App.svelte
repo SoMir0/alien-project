@@ -1,8 +1,8 @@
 <script>
 // imports
-import Profile from './lib/Profile.svelte';
-import Chat from './lib/Chat.svelte';
-import Navbar from './lib/Navbar.svelte';
+import Profile from './components/Profile.svelte';
+import Chat from './components/Chat.svelte';
+import Navbar from './components/Navbar.svelte';
 
 // variables
 let userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
