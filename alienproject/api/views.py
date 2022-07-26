@@ -10,4 +10,4 @@ class GreetingApi(APIView):
     renderer_classes = [JSONRenderer]
 
     def get(self, request, format=None):
-        return Response({"message": "Hello world"})
+        return Response({"username": request.user.get_username()})

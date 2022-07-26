@@ -1,11 +1,13 @@
 <script>
 export let toggleThemeFunc;
 export let currentTheme;
+
+export let userInfo;
 </script>
 
 <img src="https://st.depositphotos.com/1779253/5140/v/450/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg" alt="Default profile" class="pic" />
 <button class="theme-button" on:click={toggleThemeFunc}>{#if currentTheme}Light{:else}Dark{/if}</button>
-<h3>Your Name</h3>
+<h3>{userInfo}</h3>
 <p>Lorem ipsum dolor sit amet, officia exce reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
 <p class="planet">Planet: <b>HippoNiteniaLibosiRa</b></p>
 

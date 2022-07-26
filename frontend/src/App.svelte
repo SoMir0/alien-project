@@ -4,18 +4,30 @@ import Profile from './components/Profile.svelte';
 import Chat from './components/Chat.svelte';
 import Navbar from './components/Navbar.svelte';
 
+import { onMount } from "svelte";
+
+
 // variables
 let userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 let profileExtended = false;
 let chatExtended = false;
 
+let username = "Loading...";
+
 // functions
 if(userPrefersDark && !window.document.body.classList.contains('dark')) window.document.body.classList.toggle('dark');
+
 const toggleTheme = () => {
   userPrefersDark = !userPrefersDark;
   window.document.body.classList.toggle('dark');
 }
+
+onMount(async () => {
+  let resp = await fetch("/api/greet").then((res) => res.json());
+  username = resp.username;
+});
+
 </script>
 
 <main>
@@ -27,7 +39,7 @@ const toggleTheme = () => {
   <button class="toggleButton right" on:click={() => {chatExtended = !chatExtended}}>{#if chatExtended}⤫{:else}⤆{/if}</button>
 
   <aside class="profile" style={profileExtended ? "" : "left: -17rem"}>
-    <Profile toggleThemeFunc={toggleTheme} currentTheme={userPrefersDark} />
+    <Profile toggleThemeFunc={toggleTheme} currentTheme={userPrefersDark} userInfo={username} />
   </aside>
 
   <aside class="chat" style={chatExtended ? "" : "right: -17rem"}>
