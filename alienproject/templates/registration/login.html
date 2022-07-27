@@ -38,4 +38,36 @@
     <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 </body>
 
+<style>
+body {
+    font-family: monospace, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}
+
+form {
+    background: #fff;
+    border-radius: 1vmax;
+    padding: 1rem;
+}
+
+form input {
+    outline: none; border: none;
+    transition: 200ms;
+}
+
+form input:hover {
+    filter: brightness(0.9);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 200ms ease-in;
+}
+</style>
 </html>
